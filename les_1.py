@@ -1,4 +1,5 @@
-from colorama import init, Fore
+# Исходники размещены в репозитории по адресу: https://github.com/ealeksbykova/phyton-sandbox
+from colorama import Fore
 import math
 
 print(Fore.GREEN + "Задача 0 (разминка)" + Fore.RESET)
@@ -59,3 +60,29 @@ for i in L:
         print("\tПринято считать, что логарифм можно вычислить только от положительного числа.")
 #############################################################
 
+print(Fore.GREEN + "Задача 3 (демографическая)" + Fore.RESET)
+
+age = [24, 35, 42, 27, 45, 48, 33]
+ageSquares = []
+
+for i in age:
+    ageSquares.append(math.pow(i,2))
+
+print("age: ", age)
+print("ageSquares: ", ageSquares)
+#############################################################
+
+print(Fore.GREEN + "Задача 4 (игровая)" + Fore.RESET)
+numbers = [1, 5, 6, 8, 10, 21, 25, 1, 0, -9, 9]
+index = int(input(Fore.YELLOW + "Введите цифру от 1 до 10: " + Fore.RESET))
+if 1<= index <= 10:
+    print(numbers[index])
+else:
+    print(Fore.RED + f"Ввод некорректен: {index}" + Fore.RESET)
+#############################################################
+
+print(Fore.GREEN + "Задача 5 (мыслительная)" + Fore.RESET)
+l = [1,2,3,4] # создание массив int
+for i in range(len(l)): # генерация индексов от 0 до 3 по длине массива
+    a = l[i] + l[i-1] # сложение текущего и предыдущего элементов массива по индексу. Индекс -1 указывает на последний элемент массива
+    print(a) # вывод в stdout
